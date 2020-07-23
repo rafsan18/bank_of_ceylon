@@ -60,3 +60,10 @@ function getInput(id) {
   const amountNumber = parseFloat(amount);
   return amountNumber;
 }
+
+function updatedSpanText(id, number) {
+  const current = document.getElementById(id).innerText;
+  const currentNumber = parseFloat(current);
+  const total = number + currentNumber;
+  document.getElementById(id).innerText = total;
+}
