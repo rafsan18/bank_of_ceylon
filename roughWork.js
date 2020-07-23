@@ -11,7 +11,9 @@ loginBtn.addEventListener("click", function () {
 const depositBtn = document.getElementById("depositBtn");
 depositBtn.addEventListener("click", function () {
   //   Getting input value and convert into number
-  const depositAmountNumber = getInput("depositAmount");
+  const depositAmount = document.getElementById("depositAmount").value;
+  const depositAmountNumber = parseFloat(depositAmount);
+
   // Getting current value and convert into number
   const currentDeposit = document.getElementById("currentDeposit").innerText;
   const currentDepositNumber = parseFloat(currentDeposit);
@@ -33,8 +35,8 @@ depositBtn.addEventListener("click", function () {
 const withdrawBtn = document.getElementById("withdrawBtn");
 withdrawBtn.addEventListener("click", function () {
   // Getting input value and convert into number
-
-  const withdrawAmountNumber = getInput("withdrawAmount");
+  const withdrawAmount = document.getElementById("withdrawAmount").value;
+  const withdrawAmountNumber = parseFloat(withdrawAmount);
 
   // Getting current value and convert into number
   const currentWithdraw = document.getElementById("currentWithdraw").innerText;
@@ -53,7 +55,6 @@ withdrawBtn.addEventListener("click", function () {
   document.getElementById("withdrawAmount").value = "";
 });
 
-// Function to get input
 function getInput(id) {
   const amount = document.getElementById(id).value;
   const amountNumber = parseFloat(amount);
