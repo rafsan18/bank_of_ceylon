@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- login Area -->
     <div id="login-area">
       <h1 class="text-center">Welcome to Bank of Ceylon</h1>
       <div class="submit-field">
@@ -38,40 +39,47 @@
         </button>
       </div>
     </div>
+    <!-- Transaction Area -->
     <div id="transaction-area">
       <div class="row">
+        <!-- Deposti Status -->
         <div class="col-md-4">
           <div class="deposit status">
             <h5>Deposit</h5>
-            <h2>BDT 000</h2>
+            <h2>BDT <span id="currentDeposit">000</span></h2>
           </div>
         </div>
+        <!-- Withdraw Status -->
         <div class="col-md-4">
           <div class="withdraw status">
             <h5>Withdraw</h5>
             <h2>BDT 000</h2>
           </div>
         </div>
+        <!-- Balance Status -->
         <div class="col-md-4">
           <div class="balance status">
             <h5>Balance</h5>
-            <h2>BDT 1200</h2>
+            <h2>BDT <span id="currentBalance">1200</span></h2>
           </div>
         </div>
       </div>
       <div class="row">
+        <!-- Deposit Submit Field -->
         <div class="col-md-6">
           <div class="submit-field">
             <h4>Deposit</h4>
             <input
+              id="depositAmount"
               class="form-control"
               type="text"
               placeholder="Enter Deposit Amount"
             />
             <br />
-            <button class="btn btn-success">Deposit</button>
+            <button id="depositBtn" class="btn btn-success">Deposit</button>
           </div>
         </div>
+        <!-- Withdraw Submit Field -->
         <div class="col-md-6">
           <div class="submit-field">
             <h4>Withdraw</h4>
